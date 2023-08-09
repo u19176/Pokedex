@@ -1,5 +1,5 @@
 # Pokedex
-O projeto consiste de uma enciclopédia feita em Cotlin para Android, com backend feito em .NET.
+Projeto consiste de uma enciclopédia feita em Kotlin para Android, com backend feito em .NET.
 
 # Links
 https://github.com/u19176/Pokedex
