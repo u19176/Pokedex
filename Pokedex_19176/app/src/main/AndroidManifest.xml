@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.unicamp.pokedex_19176">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pokedex_19176">
+        android:theme="@style/Theme.Pokedex_19176"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".menuPrincipal"
+            android:name=".pokemonInfo"
+            android:exported="true"
+            android:label="@string/title_activity_pokemon_info"
+            android:theme="@style/Theme.Pokedex_19176.NoActionBar" />
+        <activity
+            android:name=".activity_filtro"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,8 +30,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
+            android:name=".menuPrincipal"
+            android:exported="true" />
     </application>
 
 </manifest>

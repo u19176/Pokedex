@@ -10,29 +10,28 @@
         android:id="@+id/searchLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentTop="true"
+        android:orientation="horizontal"
         android:padding="16dp">
 
         <EditText
             android:id="@+id/searchEditText"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="44dp"
             android:layout_weight="1"
-            android:hint="Search Pokemon"
             android:background="@android:drawable/editbox_background"
+            android:hint="Pesquisar..."
             android:paddingStart="8dp"
             android:paddingEnd="8dp"
-            android:textColorHint="#FFFFFF"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#000000" />
 
         <ImageButton
             android:id="@+id/searchButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_menu_search"
+            android:layout_height="42dp"
             android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Search"
+            android:src="@android:drawable/ic_menu_search"
             app:tint="#FFFFFF" />
 
     </LinearLayout>
@@ -40,16 +39,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pokemonRecyclerView"
         android:layout_width="374dp"
-        android:layout_height="401dp"
+        android:layout_height="600dp"
         android:layout_centerInParent="true"
         android:layout_marginStart="40px"
-        android:layout_marginTop="40px"
-        android:layout_marginEnd="40px"
-        android:layout_marginBottom="40px"
         android:background="#FFFFFF"
         android:padding="16dp"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/filterButton"
@@ -60,6 +55,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:textColor="@color/black"
-        android:text="Filter" />
+        android:text="Filtros..." />
+
 
 </RelativeLayout>

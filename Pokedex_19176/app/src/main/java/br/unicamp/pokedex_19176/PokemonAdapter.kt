@@ -1,4 +1,5 @@
 package br.unicamp.pokedex_19176
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -24,7 +25,12 @@ class PokemonAdapter(private var pokemonList: List<PokemonData>) : RecyclerView.
         holder.pokemonName.text = pokemon.nome_pokemon
         Log.d("PokemonAdapter", "ID: ${pokemon.id_data}, Name: ${pokemon.nome_pokemon}")
 
-
+        holder.itemView.setOnClickListener()
+        {
+            val intent = Intent(it.context, pokemonInfo::class.java)
+            intent.putExtra("pokemonId", pokemon.id_data)
+            it.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

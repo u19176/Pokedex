@@ -121,7 +121,7 @@ namespace Pokedex_API.Controllers
         {
             var moves = _context.pokemon_moves
                 .Where(pm => pm.id_pokemon == id)
-                .Select(pm => pm.Move.nome_move)
+                .Select(pm => pm.Move)
                 .ToList();
 
             if (moves.IsNullOrEmpty())

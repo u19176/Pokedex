@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/moveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textSize="15sp"
+        android:paddingRight="40px"/>
+
+    <TextView
+        android:id="@+id/movePow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pow"
+        android:textSize="13sp"
+        android:paddingRight="40px"/>
+
+    <TextView
+        android:id="@+id/moveAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acc"
+        android:textSize="13sp"
+        android:paddingRight="40px"/>
+
+    <TextView
+        android:id="@+id/moveType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo"
+        android:textSize="13sp"
+        android:paddingRight="40px"/>
+
+    <TextView
+        android:id="@+id/moveCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:textSize="13sp"
+        android:paddingRight="40px"/>
+
+</LinearLayout>

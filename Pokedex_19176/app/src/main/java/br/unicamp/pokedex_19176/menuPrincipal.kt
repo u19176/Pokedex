@@ -1,9 +1,11 @@
 package br.unicamp.pokedex_19176
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
@@ -20,10 +22,20 @@ class menuPrincipal : AppCompatActivity() {
 
     private lateinit var call: Call<List<PokemonData>>
     private lateinit var adapter: PokemonAdapter
+    private lateinit var btnFiltro: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_principal)
+
+        btnFiltro = findViewById(R.id.filterButton)
+
+        btnFiltro.setOnClickListener()
+        {
+            val intent = Intent(this, activity_filtro::class.java)
+            startActivity(intent)
+        }
+
 
         val apiService = RetrofitClient.instance.create<PokemonService>()
 
@@ -61,17 +73,14 @@ class menuPrincipal : AppCompatActivity() {
             }
         })
 
-        // Get reference to the search button and search EditText
         val searchButton = findViewById<ImageButton>(R.id.searchButton)
         val searchEditText = findViewById<EditText>(R.id.searchEditText)
 
-        // Initialize the adapter and RecyclerView (moved from inside onResponse)
         val recyclerView = findViewById<RecyclerView>(R.id.pokemonRecyclerView)
-        adapter = PokemonAdapter(emptyList()) // Initially, show an empty list
+        adapter = PokemonAdapter(emptyList())
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        // Set an OnClickListener for the search button
         searchButton.setOnClickListener {
             val query = searchEditText.text.toString()
             adapter.filter(query)

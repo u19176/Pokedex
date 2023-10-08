@@ -3,8 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/activity_menu_principal.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/drawable/ic_arrowright.xml" value="0.25" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/drawable/ic_launcher_background.xml" value="0.25" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/activity_filtro.xml" value="0.23603603603603604" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/activity_main.xml" value="0.23603603603603604" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/activity_menu_principal.xml" value="0.25" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/activity_pokemon_info.xml" value="0.25" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/content_pokemon_info.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/fragment_first.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/fragment_second.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/item_move.xml" value="0.22393162393162394" />
+        <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/item_pokemon.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/guilh/AndroidStudioProjects/Pokedex_19176/app/src/main/res/layout/item_pokenmon.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/guilh/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_spinner_dropdown_item.xml" value="0.23603603603603604" />
       </map>
     </option>
   </component>
