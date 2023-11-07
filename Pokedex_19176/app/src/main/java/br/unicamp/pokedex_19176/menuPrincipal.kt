@@ -28,6 +28,20 @@ class menuPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_principal)
 
+        val filterTipo1 = intent.getStringExtra("filterTipo1") ?: ""
+        val filterTipo2 = intent.getStringExtra("filterTipo2") ?: ""
+        val filterDescricao = intent.getStringExtra("filterDescricao") ?: ""
+
+        var temFiltroh: Boolean
+
+        if(filterTipo1 == "" && filterTipo2 == "" && filterDescricao == "") {
+             temFiltroh = false
+        }
+        else
+        {
+             temFiltroh = true
+        }
+
         btnFiltro = findViewById(R.id.filterButton)
 
         btnFiltro.setOnClickListener()
@@ -60,6 +74,16 @@ class menuPrincipal : AppCompatActivity() {
                         adapter = PokemonAdapter(pokemonList)
                         recyclerView.layoutManager = LinearLayoutManager(this@menuPrincipal)
                         recyclerView.adapter = adapter
+                        if(temFiltroh == false)
+                        {
+                            adapter.filter("")
+                            Log.d("Pokemon", "Empty Filter")
+                        }
+                        else
+                        {
+                            adapter.applyFilterByOptions(filterTipo1, filterTipo2, filterDescricao)
+                            Log.d("Pokemon", "Filter Exists")
+                        }
                         adapter.notifyDataSetChanged()
                     } else {
                         Log.e("Pokemon", "API call failed with code: ${response.code()}")

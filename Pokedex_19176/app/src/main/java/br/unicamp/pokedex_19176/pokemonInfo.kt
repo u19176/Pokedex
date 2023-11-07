@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -31,22 +33,34 @@ class pokemonInfo : AppCompatActivity() {
         val txtAbility = findViewById<TextView>(R.id.txtAbilidade)
         val btnVoltar = findViewById<Button>(R.id.btnVoltarInfo)
         val movesRecyclerView = findViewById<RecyclerView>(R.id.movesView)
-
+        val imgPokemon = findViewById<ImageView>(R.id.imgPokemon)
         val movesAdapter = MovesAdapter()
         movesRecyclerView.layoutManager = LinearLayoutManager(this)
         movesRecyclerView.adapter = movesAdapter
 
         apiService = RetrofitClient.instance.create()
 
+
+
         apiService.getPokemonId(pokemonId).enqueue(object : Callback<PokemonData> {
             override fun onResponse(call: Call<PokemonData>, response: Response<PokemonData>) {
                 if (response.isSuccessful) {
                     val pokemon = response.body()
                     if (pokemon != null) {
-                        txtNome.text = pokemon.nome_pokemon
+                        txtNome.text = "Nome: "+ pokemon.nome_pokemon
                         txtDescricao.text = pokemon.descricao_pokemon
-                        txtTipo1.text = pokemon.tipo1_pokemon
-                        txtTipo2.text = pokemon.tipo2_pokemon ?: "N/A"
+                        txtTipo1.text = "Tipo 1: " + pokemon.tipo1_pokemon
+
+                        if(pokemon.tipo2_pokemon != null)
+                            txtTipo2.text = "Tipo 2: " + pokemon.tipo2_pokemon ?: "N/A"
+                        else
+                            txtTipo2.text = ""
+
+
+                        Picasso.get()
+                            .load(pokemon.imagem_pokemon)
+                            .into(imgPokemon)
+
                     } else {
                         Log.d("Pokemon Data", "Resposta Vazia")
                     }
@@ -65,7 +79,7 @@ class pokemonInfo : AppCompatActivity() {
                     val ability = response.body()
                     Log.d("Ability", "${response.body()}")
                     if (ability != null) {
-                        txtAbility.text = ability[0]
+                        txtAbility.text = "Habilidade: "+ability[0]
                     } else {
                         Log.d("Pokemon Data", "Resposta Vazia")
                     }

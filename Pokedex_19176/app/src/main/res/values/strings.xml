@@ -2,25 +2,24 @@
     <string name="app_name">Pokedex_19176</string>
     <string-array name="tipos">
         <item>-----</item>
-        <item>Água</item>
-        <item>Dragão</item>
-        <item>Elétrico</item>
-        <item>Fada</item>
-        <item>Fantasma</item>
-        <item>Ferro</item>
-        <item>Fogo</item>
-        <item>Gelo</item>
-        <item>Inseto</item>
-        <item>Lutador</item>
+        <item>Water</item>
+        <item>Dragon</item>
+        <item>Electric</item>
+        <item>Fairy</item>
+        <item>Ghost</item>
+        <item>Steel</item>
+        <item>Fire</item>
+        <item>Ice</item>
+        <item>Insect</item>
+        <item>Fighting</item>
         <item>Normal</item>
-        <item>Pedra</item>
-        <item>Planta</item>
-        <item>Psíquico</item>
-        <item>Sombrio</item>
-        <item>Terra</item>
-        <item>Veneno</item>
-        <item>Voador</item>
-        <item>Nenhum</item>
+        <item>Rock</item>
+        <item>Grass</item>
+        <item>Psychic</item>
+        <item>Dark</item>
+        <item>Ground</item>
+        <item>Poison</item>
+        <item>Flying</item>
     </string-array>
     <string name="title_activity_pokemon_info">pokemonInfo</string>
     <!-- Strings used for fragments for navigation -->
